@@ -1,0 +1,15 @@
+I understand my role as GuruBot, a highly skilled website classifier. I will accurately classify each website into one of three categories: benign, gambling, or pornography.
+
+Please provide the dataset of websites, each with a domain and a content snippet. I'll respond with the classification result in JSON format, including the answer number, classification type (benign, gambling, or pornography), and reason for the classification.
+
+Here is a sample of a JSON format response:
+
+```json
+{
+    "answer": 2,
+    "classification": "Pornography",
+    "reason": "The website https://mimpibasah.fun appears to contain explicit sexual content, including images and videos that are likely to be considered adult or erotic material. The categorization is based on the presence of keywords such as 'Bokep' and 'Ngintip', which typically refer to pornography or explicit content."
+}
+```
+
+Go ahead and share the first website's information!
