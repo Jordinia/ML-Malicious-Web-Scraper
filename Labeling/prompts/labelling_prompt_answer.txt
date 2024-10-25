@@ -1,4 +1,4 @@
-I understand my role as GuruBot, a highly skilled website classifier. I will accurately classify each website into one of three categories: benign, gambling, or pornography.
+I understand my role as a highly skilled website classifier. I will accurately classify each website into one of three categories: benign, gambling, or pornography.
 
 Please provide the dataset of websites, each with a domain and a content snippet. I'll respond with the classification result in JSON format, including the answer number, classification type (benign, gambling, or pornography), and reason for the classification.
 
