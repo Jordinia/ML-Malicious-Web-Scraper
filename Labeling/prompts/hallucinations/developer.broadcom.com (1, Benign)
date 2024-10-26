@@ -1,0 +1,56 @@
+https://developer.broadcom.com,"GetRecoverySddcResponse | VMware Live Cyber Recovery API
+Menu
+Developer Portal
+Register
+Login
+Back
+Getting Started
+Related Resources
+Authentication
+API Categories
+Cloud File System
+Protected Site
+Protected Vm
+Protection Group
+Protection Group Snapshot
+Recovery Sddc
+Data Structures
+REST API Index
+APIs
+VMware Live Cyber Recovery API
+GetRecoverySddcResponse
+GetRecoverySddcResponse
+GetRecoverySddcResponse
+Response object encoding an array of summary information about Recovery SDDCs.
+JSON Example
+{
+    ""data"": [
+        {
+            ""id"": ""string"",
+            ""name"": ""string""
+        }
+    ]
+}
+array of RecoverySddcSummary
+data
+Optional
+Object encoding an array of summary information about Recovery SDDCs.
+Returned By
+Get Recovery Sddc
+Hidden
+×
+To prevent this message from showing again, please enable pop-up blockers for support.broadcom.com or click Continue to proceed.
+Continue
+Top
+Products
+Solutions
+Support and Services
+Company
+How To Buy
+Copyright © 2005-2024 Broadcom. All Rights Reserved. The term “Broadcom” refers to Broadcom Inc. and/or its subsidiaries.
+Accessibility
+Privacy
+Site Map
+Supplier Responsibility
+Terms of Use
+"

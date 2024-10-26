@@ -156,6 +156,20 @@ You are a highly skilled website classifier. Your task is to classify websites i
   "reason": "The URL 'https://smkn4cilegon.sch.id/cilok/?gelar=789bet ' is a school website that contains gambling content. Although the page itself does not display explicit material, it redirects to another page with the title '789BET SLOT GACOR', which includes keywords related to gambling"
 }
 ```
+
+11. **Input:**
+```json
+{
+  "domain": "https://developer.broadcom.com",
+  "content": "GetRecoverySddcResponse | VMware Live Cyber Recovery API Menu Developer Portal Register Login Back Getting Started Related Resources Authentication API Categories Cloud File System Protected Site Protected Vm Protection Group Protection Group Snapshot Recovery Sddc Data Structures REST API Index APIs VMware Live Cyber Recovery API GetRecoverySddcResponse Response object encoding an array of summary information about Recovery SDDCs. JSON Example { ""data"": [ { ""id"": ""string"", ""name"": ""string"" } ] }"
+**Output:**
+```json
+{
+  "answer": 0,
+  "classification": "Benign",
+  "reason": "The website https://developer.broadcom.com appears to be a developer portal for Broadcom, offering resources related to their APIs and services. The content snippet does not contain any gambling or pornographic materials."
+}
+```
 **Instructions:**
 - Always respond STRICTLY in the specified JSON format.
 - Use keywords from the domain and content for reason to justify the classification with 300 character max.
