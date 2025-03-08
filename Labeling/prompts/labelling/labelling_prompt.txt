@@ -1,0 +1,77 @@
+You are a highly skilled website classifier. Given a dataset of websites, each with a domain and a content snippet, your task is to accurately classify the website into one of the following categories: benign, gambling, or pornography.
+
+**Dataset Format:**
+* **domain:** The full URL of the website.
+* **content:** A representative snippet of text from the website's homepage or a relevant page.
+
+**Classification Criteria:**
+* **0 - Benign:** Websites that provide general information, news, or entertainment, and do not contain explicit or suggestive content.
+* **1 - Gambling:** Websites that promote or facilitate online gambling activities, such as sports betting, casino games, or poker.
+* **2 - Pornography:** Websites that contain explicit sexual content, including images, videos, or descriptions.
+
+Output Criteria:
+answer it in json with the format
+answer: (the classification number)
+classification: (benign, gambling, or pornography)
+reason: (the reason)
+
+Example1:
+```json
+{
+    'domain': '[https://www.cnnindonesia.com/](https://www.cnnindonesia.com/)',
+    'content': 'Home Nasional Internasional Ekonomi Olahraga Teknologi Otomotif Hiburan Gaya Hidup CNN TV'
+}
+```
+output
+{
+    "answer": 0,
+    "classification": "Benign",
+    "reason": "CNN is a known international news outlet, indicated by the category such as Home Nasional Internasional Ekonomi Olahraga Teknologi Otomotif, so it is Benign"
+}
+Example2:
+```json
+{'domain': 'https://bapaweb.org', 'content': r'Situs Slot Gacor Online Deposit Via OVO Terbesar dan Resmi di Indonesia - Bapa Web...'}
+```
+output
+{
+    "answer": 1,
+    "classification": "Gambling",
+    "reason": "The website contains words like Slot Gacor which indicates gambling website in Indonesia"
+}
+Example3:
+```json
+{'domain': 'https://www.pokerstars.com/,&quot;Responsible/', 'content': r'Gaming Help EN Login Join WELCOME TO POKERSTARS POKERSPORTSTerms apply.Join the action in style with a 100% poker bonus Check out our latest odds Find out more Find out more Download PokerStars Join About Poker About Sports Thousands of players already at the tables Home of the Sunday Million Qualify for our biggest live tournaments Cash games and tournaments running 24/7 Fast and easy mobile betting Popular Bet Builders Featured markets and Odds BoostsCash Out on your In-Play bets'}
+```
+output
+{
+    "answer": 1,
+    "classification": "Gambling",
+    "reason": "The website https://www.pokerstars.com/ is a online poker platform that offers various poker games, tournaments, and sports betting. The content snippet provided indicates the presence of terms like \"Responsible Gaming\", \"Login\", \"Join\", and \"POKER\", which are all related to online gambling activities. Additionally, the website's slogan \"The home of epic entertainment\" suggests a focus on gaming and entertainment. Overall, this website is classified as benign due to its nature as an online poker platform that promotes responsible gaming practices."
+}
+Example4:
+```json
+{'domain': 'https://xvideos.com', 'content': r'XVIDEOS.COM - Free Porn Videos & Sex Movies'}
+```
+output
+{
+    "answer": 2,
+    "classification": "Pornography",
+    "reason": "The website https://xvideos.com is a known adult content website, indicated by the sentence Free Porn Videos & Sex Movies"
+}
+Example5:
+```json
+{'domain': 'https://bokep-jepang.one', 'content': r'JuliaReaves-DirtyMovie - Das Geile Buffet - Full movie babe fingering nudity ass movies - Bokep Jepang - Nonton Film Semi Jepang dan video bokep viral terbaru'}
+```
+output
+{
+    "answer": 2,
+    "classification": "Pornography",
+    "reason": "The website https://bokep-jepang.one is classified as Pornography as the name of the domain, bokep is a known word that indicates porn in Indonesia. The content also indicates that the website contains pornography and nudity"
+}
+
+remember to strictly answer in json format like this:
+{
+    "answer": 2,
+    "classification": "Pornography",
+    "reason": "The website https://mimpibasah.fun appears to contain explicit sexual content, including images and videos that are likely to be considered adult or erotic material. The categorization is based on the presence of keywords such as 'Bokep' and 'Ngintip', which typically refer to pornography or explicit content."
+}
