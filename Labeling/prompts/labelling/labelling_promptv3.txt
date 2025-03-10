@@ -31,8 +31,9 @@ You are an expert website classifier tasked with categorizing websites into one 
 malware, ransomware, phishing, hack, terrorism, jual narkoba, senjata ilegal, konten SARA, berita bohong, ancaman, pembajakan, cracked software, carding, darknet.
     - **Exceptions:** 
         - Educational/news content about illegal topics → **0 - Benign**. 
-        - Classify child exploitation, bestiality, or non-consensual content as **3 - Harmful**, even if sexually explicit. Consensual adult content → **2 - Pornography**. 
+        - Any kind of adult porn content → **2 - Pornography**. 
         - Licensed gambling → **1 - Gambling**; unlicensed/scams → **3 - Harmful**.
+        - If gambling and pornography is mentioned on the same site, then check which one is dominant and DO NOT classify is as 3 - Harmful.
 
 
 ### **Input Data Context:**
@@ -202,6 +203,29 @@ Content:  Welcome to Project420.com an ongoing community marijuana, hemp search 
   "classification": "Harmful",
   "reason": "Domain 'project420.com' and content include keywords like 'marijuana seeds,' 'growing marijuana,' and '420 products,' indicating promotion of illegal drugs under Indonesian law (UU ITE). Strong keywords in content (25 pts), Partial Domain and Content Alignment (15 pts), clear harmful intent (20 pts), multiple indicators (10 pts). Total 70 points.",
   "confidence": 70
+}
+```
+**5th Sample**
+
+**Input Data:**
+
+```
+Domain: https://www.terrorismwatch.org
+Content:  UK to look into racism, sexism, anti-Semitism in campaign. Britain's prime minister has requested an investigation into the abuse and intimidation of parliamentary candidates in last month's election.
+Theresa May asked the Committee on Standards in Public Life to review a rising number of reports from members of all political parties of sexism, racism and anti-Semitism.
+A report from the All Party Parliamentary Group on Antisemitism found many candidates in Britain's 2017 general election received death threats and abuse online.
+May said Wednesday that she was ""horrified"" by the intimidation and harassment of her colleagues.
+""Robust debate is a vital part of our democracy, but there can be no place for the shocking threats and abuse we have seen in recent months,"" she said
+```
+
+**Expected Output:**
+
+```json
+{
+  "answer": 0,
+  "classification": "Benign",
+  "reason": "Domain 'terrorismwatch.org' and content discuss news and events related to terrorism, politics, and social issues, such as racism and anti-Semitism. The website appears to be an informational blog reporting on these topics, not promoting terrorism or harmful activities. Some relevant keywords in domain and content (15 pts), Partial domain-content alignment (15 pts), unambiguous content as news reporting (20 pts), some category indicators for news/information (5 pts). Total 55 points.",
+  "confidence": 55
 }
 ```
 **Dataset to be Labeled:**

@@ -1,9 +1,0 @@
-2025-03-09 03:40:56,939 - INFO - Logging to: logs\domain_classification_20250309_034056.log
-2025-03-09 03:41:00,206 - INFO - Model deepseek-r1:32b reloaded successfully
-2025-03-09 03:41:00,207 - ERROR - Processing error: [Errno 2] No such file or directory: 'F:/SKRIPSI/Data/0-49/Processed/testing_label.csv'
-2025-03-09 03:41:22,230 - INFO - Logging to: logs\domain_classification_20250309_034122.log
-2025-03-09 03:41:25,505 - INFO - Model deepseek-r1:32b reloaded successfully
-2025-03-09 03:41:25,507 - ERROR - Processing error: [Errno 2] No such file or directory: 'F:/SKRIPSI/Data/0-49/Processed/testing_label.csv'
-2025-03-09 03:42:53,692 - INFO - Logging to: logs\domain_classification_20250309_034253.log
-2025-03-09 03:42:56,950 - INFO - Model deepseek-r1:32b reloaded successfully
-2025-03-09 03:42:56,950 - ERROR - Processing error: [Errno 2] No such file or directory: 'F:/SKRIPSI/Data/0-49/Processed/testing_label.csv'
